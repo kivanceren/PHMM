@@ -26,27 +26,27 @@ public class PHMM {
 			  line=br.readLine();
 			  say=Integer.parseInt(line);
 			  while ((line = br.readLine()) != null) {
-														if(satir!=(say+1))
-														{
-															 stringler.add(new Dizilimler(line,0,0));														 
-															 satir++;
-														}
-														else
-														{
-															match_state_matris=new boolean[line.length()];
-															for(int i=0;i<line.length();i++)
-															{
-																if(line.charAt(i)=='*')
-																{
-																	match_state_matris[i]=true;
-																	son_State++;
+									if(satir!=(say+1))
+									{
+										stringler.add(new Dizilimler(line,0,0));														 
+										satir++;
+									}
+								        else
+									{
+										match_state_matris=new boolean[line.length()];
+										for(int i=0;i<line.length();i++)
+										{
+										    if(line.charAt(i)=='*')
+										    {
+											match_state_matris[i]=true;
+											son_State++;
 																	
-																}
-																else match_state_matris[i]=false;
-															}
-														}
+										     }
+										     else match_state_matris[i]=false;
+										}
+									}
 												     
-			  										  }
+			  					  }//while end.
 		    br.close();
      	} catch (Exception e) {
 		// TODO Auto-generated catch block
